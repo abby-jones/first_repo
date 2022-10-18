@@ -1,0 +1,9 @@
+SELECT COUNT(name) FROM customers;
+SELECT SUM(price) FROM products;
+SELECT SUM(age) FROM customers;
+SELECT MIN(price) FROM products;
+SELECT MAX(price) FROM products;
+SELECT MIN(stock) FROM products;
+SELECT MAX(stock) FROM products;
+SELECT AVG(price) FROM products;
+SELECT title, AVG(price) FROM products GROUP BY title;

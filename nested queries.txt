@@ -1,0 +1,15 @@
+SELECT MAX(price)
+FROM products;
+SELECT *
+FROM products
+WHERE price=(
+    SELECT MAX(price)
+    FROM products);
+
+SELECT MIN(price)
+FROM products;
+SELECT *
+FROM products
+WHERE price=(
+    SELECT MIN(price)
+    FROM products);

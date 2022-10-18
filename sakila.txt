@@ -1,0 +1,43 @@
+USE sakila;
+SELECT * FROM sakila.actor;
+
+SELECT * FROM sakila.actor WHERE first_name = 'John';
+
+SELECT * FROM sakila.actor WHERE last_name = 'Neeson';
+
+4 ??
+
+SELECT description FROM sakila.film WHERE film_id = 100;
+
+SELECT title FROM sakila.film WHERE rating = 'R';
+
+SELECT title FROM sakila.film WHERE rating != 'R';
+
+SELECT title FROM sakila.film WHERE special_features = 'Deleted Scenes';
+
+10 ??
+
+SELECT actor_id, COUNT(actor_id)
+FROM sakila.film_actor
+GROUP BY actor_id
+ORDER BY COUNT(actor_id) DESC;
+SELECT first_name, last_name FROM sakila.actor
+WHERE actor_id = '107'
+
+12 ??
+
+SELECT AVG(length) FROM sakila.film;
+
+SELECT AVG(length) FROM sakila.film sfil
+INNER JOIN sakila.film_category scat on sfil.film_id=scat.film_id
+GROUP BY scat.category_id;
+
+SELECT title FROM sakila.film WHERE description = 'robot';
+
+SELECT length FROM sakila.film ORDER BY length DESC;
+
+SELECT * FROM sakila.film WHERE release_year = 2010;
+
+SELECT (first_name + ' ' + last_name) as full_name from sakila.staff
+WHERE staff_id=1;
+
